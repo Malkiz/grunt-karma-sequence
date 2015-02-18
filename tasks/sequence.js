@@ -7,6 +7,7 @@ module.exports = function(grunt) {
 			browsers.forEach(function (browser) {
 				var clonedData = clone(_this.data);
 				clonedData.browsers = [browser];
+				clonedData.singleRun = true;
 
 				var taskName = 'karma';
 				var name = _this.target + '-sequence-' + browser;
