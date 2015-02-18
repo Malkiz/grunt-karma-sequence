@@ -1,0 +1,14 @@
+{
+  "name": "grunt-karma-sequence",
+  "version": "1.0.0",
+  "description": "run karma with multiple browsers sequentially",
+  "files": [
+    "tasks"
+  ],
+  "repository": "http://github.com/Malkiz/grunt-karma-sequence",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "omri eyal",
+  "license": "WTFPL"
+}
