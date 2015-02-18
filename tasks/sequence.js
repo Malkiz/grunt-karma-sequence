@@ -9,6 +9,12 @@ module.exports = function(grunt) {
 				clonedData.browsers = [browser];
 				clonedData.singleRun = true;
 
+				if (clonedData.junitReporter && clonedData.junitReporter.outputFile) {
+					var path = clonedData.junitReporter.outputFile;
+					var matched = path.match(/([^]*)\.([^\.]*)$/);
+					clonedData.junitReporter.outputFile = matched[1] + '.' + browser + '.' + matched[2];
+				}
+
 				var taskName = 'karma';
 				var name = _this.target + '-sequence-' + browser;
 				grunt.config(taskName + '.' + name, clonedData);
